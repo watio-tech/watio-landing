@@ -35,10 +35,11 @@
 
     <!-- Navegación -->
     <nav class="fixed w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-100">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+        <!-- Aumenté la altura del menú a h-24 para que el logo respire -->
+        <div class="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
             <div class="flex items-center gap-2">
-                <!-- Logo -->
-                <img src="logo.png" alt="Watio Logo" class="h-10 object-contain" onerror="this.outerHTML='<span class=\'text-2xl font-black tracking-tighter\'>Watio<span class=\'text-watio-cyan\'>.</span></span>'">
+                <!-- Logo: Aumenté el tamaño a h-16 (móvil) y h-20 (desktop) -->
+                <img src="logo.jpg" alt="Watio Logo" class="h-16 md:h-20 object-contain drop-shadow-sm" onerror="this.outerHTML='<span class=\'text-3xl font-black tracking-tighter\'>Watio<span class=\'text-watio-cyan\'>.</span></span>'">
             </div>
             <div class="flex items-center gap-6">
                 <!-- Switcher de Idiomas -->
@@ -55,7 +56,7 @@
     </nav>
 
     <!-- Sección 1: El Hero -->
-    <header class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+    <header class="relative pt-36 pb-20 lg:pt-52 lg:pb-32 overflow-hidden">
         <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
             
             <!-- Copy Principal -->
