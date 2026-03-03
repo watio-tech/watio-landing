@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watio ⚡️ | Inteligência em Eletromobilidade</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { background-color: #0f172a; }
+        .cyan-glow { color: #00E5FF; text-shadow: 0 0 10px rgba(0, 229, 255, 0.3); }
+        .bg-cyan-watio { background-color: #00E5FF; }
+        .lang-btn { cursor: pointer; transition: all 0.2s; }
+        .lang-btn:hover { opacity: 1 !important; }
+    </style>
+</head>
+<body class="text-white font-sans antialiased">
+
+    <!-- Language Switcher -->
+    <div class="absolute top-6 right-6 z-50 flex space-x-3 bg-slate-900/80 px-4 py-2 rounded-full border border-slate-700 backdrop-blur-sm text-sm">
+        <span class="lang-btn opacity-50" data-lang="pt-BR" onclick="setLanguage('pt-BR')">🇧🇷 PT</span>
+        <span class="lang-btn opacity-50" data-lang="es-AR" onclick="setLanguage('es-AR')">🇦🇷 AR</span>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <!-- Background Decor -->
+        <div class="absolute top-0 left-0 w-full h-full opacity-10">
+            <div class="absolute top-10 left-10 w-64 h-64 bg-cyan-400 rounded-full filter blur-3xl"></div>
+            <div class="absolute bottom-10 right-10 w-96 h-96 bg-blue-600 rounded-full filter blur-3xl"></div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10 text-center">
+            <!-- Logo Simulation -->
+            <div class="mb-12">
+                <h1 class="text-6xl md:text-8xl font-black tracking-tighter">
+                    Watio<span class="cyan-glow">.</span>
+                </h1>
+                <div class="h-1.5 w-24 bg-cyan-watio mx-auto mt-2 rounded-full"></div>
+            </div>
+
+            <h2 class="text-2xl md:text-4xl font-light mb-6 tracking-tight" data-i18n="subtitle">
+                Inteligência em eletromobilidade para <span class="font-semibold italic">condomínios premium</span>.
+            </h2>
+            
+            <p class="text-slate-400 max-w-2xl mx-auto mb-10 text-lg" data-i18n="description">
+                Estamos chegando a São Paulo e Rio de Janeiro com a tecnologia mais avançada em gestão de recarga e rateio de energia.
+            </p>
+
+            <!-- Status Badge -->
+            <div class="inline-flex items-center space-x-2 bg-slate-800/50 border border-slate-700 px-4 py-2 rounded-full mb-12">
+                <span class="flex h-2 w-2 rounded-full bg-cyan-watio animate-pulse"></span>
+                <span class="text-xs uppercase tracking-widest font-bold" data-i18n="badge">Lançamento Q1 2026</span>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-col md:flex-row items-center justify-center gap-4">
+                <a href="mailto:jvolcanes@watio.com.ar" class="w-full md:w-auto bg-cyan-watio hover:bg-cyan-400 text-slate-900 font-bold py-4 px-8 rounded-xl transition-all transform hover:scale-105" data-i18n="btnPilot">
+                    Seja um Condomínio Piloto
+                </a>
+                <a href="#about" class="w-full md:w-auto border border-slate-700 hover:bg-slate-800 text-white py-4 px-8 rounded-xl transition-all" data-i18n="btnMore">
+                    Saber mais
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Brief Features -->
+    <section id="about" class="py-24 bg-slate-900/50">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="p-8 border border-slate-800 rounded-3xl bg-slate-900">
+                    <i class="fas fa-chart-line text-3xl cyan-glow mb-6"></i>
+                    <h3 class="text-xl font-bold mb-4" data-i18n="feat1Title">Rateio Automático</h3>
+                    <p class="text-slate-400" data-i18n="feat1Desc">Esqueça as planilhas. Geramos relatórios precisos de consumo para cobrança individual direta.</p>
+                </div>
+                <div class="p-8 border border-slate-800 rounded-3xl bg-slate-900">
+                    <i class="fas fa-bolt text-3xl cyan-glow mb-6"></i>
+                    <h3 class="text-xl font-bold mb-4" data-i18n="feat2Title">Smart Charging</h3>
+                    <p class="text-slate-400" data-i18n="feat2Desc">Balanceamento dinâmico de carga que protege a infraestrutura elétrica do seu edifício.</p>
+                </div>
+                <div class="p-8 border border-slate-800 rounded-3xl bg-slate-900">
+                    <i class="fas fa-mobile-alt text-3xl cyan-glow mb-6"></i>
+                    <h3 class="text-xl font-bold mb-4" data-i18n="feat3Title">App Proprietário</h3>
+                    <p class="text-slate-400" data-i18n="feat3Desc">Controle total na palma da mão para moradores e síndicos profissionais.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-slate-800 text-center">
+        <p class="text-slate-500 text-sm" data-i18n="footer">
+            &copy; 2026 Watio Energy. Berlin | São Paulo | Buenos Aires.
+        </p>
+    </footer>
+
+    <!-- Multilanguage Engine -->
+    <script>
+        const translations = {
+            "pt-BR": {
+                subtitle: 'Inteligência em eletromobilidade para <span class="font-semibold italic">condomínios premium</span>.',
+                description: 'Estamos chegando a São Paulo e Rio de Janeiro com a tecnologia mais avançada em gestão de recarga e rateio de energia.',
+                badge: 'Lançamento Q1 2026',
+                btnPilot: 'Seja um Condomínio Piloto',
+                btnMore: 'Saber mais',
+                feat1Title: 'Rateio Automático',
+                feat1Desc: 'Esqueça as planilhas. Geramos relatórios precisos de consumo para cobrança individual direta.',
+                feat2Title: 'Smart Charging',
+                feat2Desc: 'Balanceamento dinâmico de carga que protege a infraestrutura elétrica do seu edifício.',
+                feat3Title: 'App Proprietário',
+                feat3Desc: 'Controle total na palma da mão para moradores e síndicos profissionais.',
+                footer: '&copy; 2026 Watio Energy. Berlin | São Paulo | Buenos Aires.'
+            },
+            "es-AR": {
+                subtitle: 'Inteligencia en electromovilidad para <span class="font-semibold italic">consorcios premium</span>.',
+                description: 'Estamos llegando a Buenos Aires y el interior con la tecnología más avanzada en gestión de recargas y prorrateo de expensas.',
+                badge: 'Lanzamiento Q1 2026',
+                btnPilot: 'Sumá tu Edificio Piloto',
+                btnMore: 'Saber más',
+                feat1Title: 'Prorrateo en Expensas',
+                feat1Desc: 'Olvidate de las planillas. Generamos reportes precisos de consumo para liquidar en las expensas directamente.',
+                feat2Title: 'Smart Charging',
+                feat2Desc: 'Balanceo dinámico de carga que protege la instalación eléctrica de tu edificio y cocheras.',
+                feat3Title: 'App Propia',
+                feat3Desc: 'Control total en la palma de la mano para propietarios y administradores de consorcios.',
+                footer: '&copy; 2026 Watio Energy. Berlín | São Paulo | Buenos Aires.'
+            }
+        };
+
+        function setLanguage(lang) {
+            document.documentElement.lang = lang;
+            
+            // Replace text based on data-i18n attributes
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    el.innerHTML = translations[lang][key];
+                }
+            });
+
+            // Update UI buttons
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('opacity-100', 'font-bold', 'bg-slate-700/50', 'px-2', 'rounded');
+                btn.classList.add('opacity-50');
+                if(btn.dataset.lang === lang) {
+                    btn.classList.remove('opacity-50');
+                    btn.classList.add('opacity-100', 'font-bold', 'bg-slate-700/50', 'px-2', 'rounded');
+                }
+            });
+        }
+
+        // Auto-detect browser language on load
+        window.addEventListener('DOMContentLoaded', () => {
+            const browserLang = navigator.language || navigator.userLanguage;
+            let defaultLang = 'pt-BR'; // Default to Brazil as main market
+            
+            if (browserLang.toLowerCase().includes('es')) {
+                defaultLang = 'es-AR';
+            }
+            
+            setLanguage(defaultLang);
+        });
+    </script>
+</body>
+</html>
