@@ -3,9 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Básico -->
     <title>Watio ⚡️ | El CPMS diseñado para LATAM</title>
+    <meta name="description" content="Automatización de recarga eléctrica para consorcios premium. Medición precisa, cobro automatizado y gestión inteligente de energía.">
+    
+    <!-- Open Graph (WhatsApp, LinkedIn, Twitter) -->
+    <meta property="og:title" content="Watio ⚡️ | Inteligência em Eletromobilidade">
+    <meta property="og:description" content="Resolvé la carga de eléctricos en tu edificio sin complicar las expensas. Tecnología alemana con presencia local.">
+    <meta property="og:image" content="https://watio.com.ar/logo.png">
+    <meta property="og:url" content="https://watio.com.ar">
+    <meta property="og:type" content="website">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <script>
         tailwind.config = {
             theme: {
@@ -62,12 +74,11 @@
 </head>
 <body class="bg-[#fafafa] text-watio-charcoal antialiased selection:bg-watio-cyan selection:text-watio-charcoal relative">
 
-    <!-- Navegación (Ahora en Blanco Sólido para camuflar el fondo del logo) -->
+    <!-- Navegación -->
     <nav class="fixed w-full bg-white z-40 border-b border-gray-100 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6 h-20 md:h-24 flex items-center justify-between">
             <div class="flex items-center gap-2 animate-fade-in">
-                <!-- LOGO PNG: Sin sombras ni efectos raros, se funde con el fondo blanco -->
-                <img src="logo.png" alt="Watio Logo" class="h-10 md:h-12 object-contain" onerror="this.outerHTML='<span class=\'text-3xl font-black tracking-tighter\'>Watio<span class=\'text-watio-cyan\'>.</span></span>'">
+                <img src="logo.png" alt="Watio Logo" class="h-10 md:h-12 object-contain" onerror="this.outerHTML='<span class=\'text-3xl font-black tracking-tighter text-watio-charcoal\'>Watio<span class=\'text-watio-cyan\'>.</span></span>'">
             </div>
             <div class="flex items-center gap-6 animate-fade-in delay-100">
                 <div class="flex space-x-2 text-sm font-semibold text-gray-400 bg-gray-50 px-3 py-1.5 rounded-full border border-gray-100">
@@ -173,9 +184,9 @@
 
     <!-- Social Proof -->
     <div class="border-y border-gray-200 bg-white py-8">
-        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-center gap-8 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-center gap-8 opacity-60 grayscale hover:grayscale-0 transition-all duration-500 text-center">
             <span class="text-sm font-bold text-gray-400 uppercase tracking-widest" data-i18n="trustTitle">Software compatible con:</span>
-            <div class="flex gap-8 items-center text-xl font-black text-gray-800">
+            <div class="flex flex-wrap justify-center gap-8 items-center text-xl font-black text-gray-800">
                 <span>WEG</span>
                 <span>Intelbras</span>
                 <span>Enel X</span>
@@ -264,14 +275,12 @@
         </div>
     </section>
 
-    <!-- Footer (Ahora en Blanco/Gris claro para que el logo se vea perfecto) -->
+    <!-- Footer -->
     <footer class="bg-white py-12 text-center text-gray-500 text-sm border-t border-gray-100">
         <div class="max-w-7xl mx-auto px-6">
             <div class="mb-8 flex justify-center">
-                <!-- LOGO REAL TAMBIÉN EN EL FOOTER -->
                 <img src="logo.png" alt="Watio Logo" class="h-10 object-contain" onerror="this.outerHTML='<span class=\'text-3xl font-black tracking-tighter text-watio-charcoal\'>Watio<span class=\'text-watio-cyan\'>.</span></span>'">
             </div>
-            <!-- CIUDAD CORREGIDA A RIO DE JANEIRO -->
             <p class="mb-6 font-medium" data-i18n="footerText">
                 &copy; 2026 Watio Energy.<br class="md:hidden"> Berlin | Rio de Janeiro | Buenos Aires.
             </p>
@@ -296,7 +305,6 @@
                         <h3 class="text-2xl font-black text-watio-charcoal mb-2" data-i18n="formTitle">Impulsá tu edificio.</h3>
                         <p class="text-sm text-gray-500" data-i18n="formSub">Dejanos tus datos y un especialista te contactará para evaluar la infraestructura de tu edificio sin cargo.</p>
                     </div>
-                    <!-- LINK DE FORMSPREE CORREGIDO CON TU ID -->
                     <form id="watioLeadForm" action="https://formspree.io/f/mzdalnaz" method="POST" class="p-8 space-y-5">
                         <div>
                             <label class="block text-sm font-bold text-watio-charcoal mb-1" data-i18n="lblRole">¿Cuál es tu rol?</label>
@@ -488,7 +496,7 @@
                 lblBuilding: "Nome do Condomínio",
                 plcBuilding: "Ex: Condomínio Lumiere",
                 formBtn: "Solicitar Contato",
-                formPrivacy: "Seus dados estão seguros. Não enviamos spam.",
+                formPrivacy: "Seus datos estão seguros. Não enviamos spam.",
                 successTitle: "Solicitação recebida!",
                 successDesc: "Um especialista da Watio analisará suas informações e entrará em contato em breve.",
                 closeBtn: "Fechar janela",
